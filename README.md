@@ -1,6 +1,6 @@
 # devcontainer-dev1
 
-This dev container is based on  `mcr.microsoft.com/devcontainers/base:debian`.
+To use the dev container, use `ghcr.io/mi-skam/devcontainers-dev1`.
 
 Additional software:
 - Node 18.x
