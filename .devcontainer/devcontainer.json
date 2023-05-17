@@ -2,12 +2,21 @@
   // docker-compose: service definition
   "dockerComposeFile": "docker-compose.yml",
   "service": "devcontainer",
-  
+  "workspaceFolder": "${localWorkspaceFolder}",
   "customizations": {
     // Configure properties specific to VS Code.
     "vscode": {
       // Add the IDs of extensions you want installed when the container is created.
-      "extensions": ["dbaeumer.vscode-eslint"]
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "mgmcdermott.vscode-language-babel",
+        "ms-vscode.live-server",
+        "bradlc.vscode-tailwindcss",
+        "wayou.vscode-todo-highlight"
+      ]
     }
   },
 
@@ -17,32 +26,28 @@
 
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-		"nodeGypDependencies": true,
-		"version": "18"
-	},
+      "nodeGypDependencies": true,
+      "version": "lts"
+    },
     "ghcr.io/devcontainers-contrib/features/npm-package:1": {
-		"package": "typescript",
-		"version": "latest"
-	},
+      "package": "typescript",
+      "version": "latest"
+    },
     "ghcr.io/devcontainers-contrib/features/jest:2": {
-		"version": "latest"
-	},
-	"ghcr.io/eliises/devcontainer-features/devcontainers-cli:1": {
-		"version": "0.27.1",
-		"nodeVersion": "18.13.10"
-	},
-	"ghcr.io/devcontainers/features/git-lfs:1": {
-		"version": "latest"
-	},
-	"ghcr.io/devcontainers/features/github-cli:1": {
-		"installDirectlyFromGitHubRelease": true,
-		"version": "latest"
-	},
-	"ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
-	"ghcr.io/mikaello/devcontainer-features/modern-shell-utils:1": {},
-	"ghcr.io/devcontainers/features/php:1": {
-		"installComposer": true,
-		"version": "8.2.0"
-	}
+      "version": "latest"
+    },
+    "ghcr.io/eliises/devcontainer-features/devcontainers-cli:1": {
+      "version": "0.27.1",
+      "nodeVersion": "18.13.10"
+    },
+    "ghcr.io/devcontainers/features/git-lfs:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "installDirectlyFromGitHubRelease": true,
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
+    "ghcr.io/mikaello/devcontainer-features/modern-shell-utils:1": {}
   }
 }
